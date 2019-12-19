@@ -6,3 +6,5 @@ services:
 before_install:
    - docker build -t TESTME -f Dockerfile.dev .
 
+script:
+   - docker run -e CI=true TESTME/docker-npm npm run test
