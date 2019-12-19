@@ -4,7 +4,7 @@ services:
    - docker
 
 before_install:
-   - docker build -t TESTME -f Dockerfile.dev .
+   - docker build -t brunors7/docker-npm -f Dockerfile.dev .
 
 script:
-   - docker run -e CI=true TESTME/docker-npm npm run test
+   - docker run -e CI=true brunors7/docker-npm npm run test
